@@ -1,8 +1,6 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 30px 6vw;
-  background-color: white;
   margin: 0;
 }
 .navbar .name a {
@@ -38,7 +36,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
   }
   .navbar a {
     padding: 5px 10px;

@@ -1,17 +1,18 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Header = () => {
   return (
     <div class="navbar header">
-      <div class="name">
-        <a class="navbar-name" href="./index.html">
+      <div className="name">
+        <a className="navbar-name" href="./">
           Graham Miller
         </a>
       </div>
-      <div class="navlinks">
+      <div className="navlinks">
         <div>
-          <a class="headerLink" href="./things/things.html">
-            Things I like
+          <a className="headerLink" href="./things/things.html">
+            <Link to="/things/"> Things I like </Link>
           </a>
         </div>
       </div>

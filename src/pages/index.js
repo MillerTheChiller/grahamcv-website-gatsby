@@ -1,37 +1,28 @@
 import React from "react"
+import Layout from "../Components/Layout/Layout"
+import SplashPage from "../Components/SplashPage/SplashPage"
 import { graphql } from "gatsby"
 
-import Layout from "../Components/Layout/Layout"
 export default ({ data }) => {
-  console.log(data)
+  const splashPageData = data.allMarkdownRemark.edges[0].node
   return (
     <Layout>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <h3>{node.frontmatter.title}</h3>
-          <h3>{node.frontmatter.tagline}</h3>
-          <h5>{node.frontmatter.date}</h5>
-          {node.excerpt}
-        </div>
-      ))}
-      <div>This is cool!!</div>
+      <SplashPage splashPageData={splashPageData} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
+  {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/splash-page/" } }
+    ) {
       edges {
         node {
-          id
           frontmatter {
             title
             tagline
-            date(formatString: "DD MMMM, YYYY")
           }
-          excerpt
         }
       }
     }

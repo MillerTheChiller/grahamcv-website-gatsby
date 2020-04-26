@@ -1,9 +1,4 @@
 ---
-title: "Graham Miller"
-tagline: "Determined to create great user experiences"
-date: "2020-04-26"
+title: "👋 Howdy"
+tagline: "My name is Graham and I'm passionate about delivering great user experiences."
 ---
-
-This is cool I am learning a lot about a lot of stuff!
-
-<a width="560" height="315" src="./aboutMe.jpg" ></a>
