@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 30px 6vw;
+  background-color: white;
+  margin: 0;
+}
+.navbar .name a {
+  font-size: 30px;
+}
+.header {
+  justify-content: space-between;
+}
+.footer {
+  justify-content: flex-start;
+}
+.navlinks {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  color: #4795b0;
+  -webkit-transition: 0.4s; /* Safari */
+  transition: 0.4s;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color: #4795b0;
+}
+
+@media only screen and (max-width: 555px) {
+  .navbar,
+  .navlinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .navbar a {
+    padding: 5px 10px;
+  }
+}

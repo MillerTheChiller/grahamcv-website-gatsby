@@ -5,7 +5,25 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Graham Miller | Full Stack Developer",
+  },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-typography`,
       options: {
