@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -26,7 +27,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "things-content",
+        path: `${__dirname}/content/things/things_content`,
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {

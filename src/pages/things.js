@@ -2,10 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../Components/Layout/Layout"
 import styles from "./things.module.css"
+import Img from "gatsby-image"
 
 const Things = ({ data }) => {
   const things_data = data.allMarkdownRemark.edges
   const { frontmatter } = things_data[0].node
+  const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+
   console.log(frontmatter)
   return (
     <Layout>
@@ -15,7 +18,7 @@ const Things = ({ data }) => {
             target="_blank"
             href="https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray"
           >
-            <img src={frontmatter.image_src} />
+            <Img fluid={featuredImgFluid} />
           </a>
 
           <iframe
@@ -121,7 +124,13 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            image_src
+            image_src {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             link_to
             type
           }
