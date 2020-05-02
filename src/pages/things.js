@@ -5,36 +5,32 @@ import styles from "./things.module.css"
 import Img from "gatsby-image"
 
 const Things = ({ data }) => {
-  const things_data = data.allMarkdownRemark.edges
-  const { frontmatter } = things_data[0].node
+  console.log(data)
+  const books = data.books.edges
+  const podcast = data.podcasts.edge
+  const { frontmatter } = books[3].node
   const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
-
-  console.log(frontmatter)
   return (
     <Layout>
       <div class={styles.columns}>
         <div class={styles.column}>
-          <a
-            target="_blank"
-            href="https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray"
-          >
-            <Img fluid={featuredImgFluid} />
+          <a target="_blank" href={frontmatter.link_to}>
+            <Img alt={frontmatter.title} fluid={featuredImgFluid} />
           </a>
 
           <iframe
             width="100%"
             height="200"
             src="https://www.youtube.com/embed/GWenb9Noq_A"
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
 
           <iframe
             src="https://open.spotify.com/embed/album/6fFp2F91noBeodV88bRwTD"
             width="100%"
             height="380"
-            frameborder="0"
-            allowtransparency="true"
+            frameBorder="0"
             allow="encrypted-media"
           ></iframe>
 
@@ -51,8 +47,8 @@ const Things = ({ data }) => {
             src="https://open.spotify.com/embed/artist/12Zk1DFhCbHY6v3xep2ZjI"
             width="100%"
             height="380"
-            frameborder="0"
-            allowtransparency="true"
+            frameBorder="0"
+            allowTransparency="true"
             allow="encrypted-media"
           ></iframe>
           <a
@@ -66,16 +62,16 @@ const Things = ({ data }) => {
             width="100%"
             height="200"
             src="https://www.youtube.com/embed/IdTMDpizis8"
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowTransparency
           ></iframe>
 
           <iframe
             src="https://open.spotify.com/embed/album/6y9QkSGMnFRJRbKzh0j91A"
             width="100%"
             height="380"
-            frameborder="0"
-            allowtransparency="true"
+            frameBorder="0"
+            allowTransparency="true"
             allow="encrypted-media"
           ></iframe>
         </div>
@@ -117,8 +113,10 @@ const Things = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/things/things_content/" } }
+    books: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/books/" }
+      }
     ) {
       edges {
         node {
@@ -131,6 +129,124 @@ export const query = graphql`
                 }
               }
             }
+            link_to
+            type
+          }
+        }
+      }
+    }
+    blogs: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/blogs/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            image_src {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            link_to
+            type
+          }
+        }
+      }
+    }
+    games: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/games/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            image_src {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            link_to
+            type
+          }
+        }
+      }
+    }
+    movies: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/movies/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            image_src {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            link_to
+            type
+          }
+        }
+      }
+    }
+    podcasts: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/movies/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            image_src {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            link_to
+            type
+          }
+        }
+      }
+    }
+    music: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/music/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            link_to
+            type
+          }
+        }
+      }
+    }
+    youtube: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/things/things_content/music/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
             link_to
             type
           }

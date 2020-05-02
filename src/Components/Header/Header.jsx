@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Header = () => {
   return (
-    <div class="navbar header">
+    <div className="navbar header">
       <div className="name">
         <a className="navbar-name" href="./">
           Graham Miller
