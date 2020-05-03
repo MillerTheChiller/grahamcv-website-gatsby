@@ -1,0 +1,64 @@
+.thingsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #4795b0;
+}
+
+img {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+iframe {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.thingsContainer {
+  margin-bottom: 5%;
+  width: 100vw;
+}
+
+.thingsContainer a {
+  text-decoration: none;
+}
+.thingsContainer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #4795b0;
+}
+
+.thingsHeader {
+  width: 88vw;
+}
+
+.thingsHeader h1,
+.thingsHeader h5 {
+  padding: 0px 10px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  width: 88vw;
+}
+
+.column {
+  width: 28vw;
+}
+
+@media only screen and (max-width: 760px) {
+  .columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .column,
+  .thingsHeader {
+    width: 80vw;
+  }
+}

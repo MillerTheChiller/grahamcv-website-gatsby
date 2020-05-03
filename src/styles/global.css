@@ -3,6 +3,10 @@ html {
   margin: 0;
 }
 
+h1 {
+  color: #4795b0;
+}
+
 h1,
 h2 {
   border-bottom: none !important;
