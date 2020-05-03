@@ -1,0 +1,15 @@
+.displayGallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.favouriteThingWrapper {
+  width: 250px;
+  margin: 5px;
+}
+
+.thingsDisplay {
+  width: 250px;
+  margin: 5px;
+}

@@ -1,6 +1,8 @@
 .thingsQueryRow {
   display: flex;
-  padding: 40px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0 10px 0px;
 }
 
 .thingsQueryRow h1 {
@@ -9,4 +11,12 @@
 
 .thingsQueryReturn {
   flex-grow: 2;
+}
+
+@media only screen and (max-width: 760px) {
+  .thingsQueryRow {
+    width: 250px;
+    justify-content: left;
+    margin: auto;
+  }
 }

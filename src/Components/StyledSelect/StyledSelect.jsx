@@ -67,7 +67,7 @@ const StyledSelect = ({ data, isMenuOpen, updateValue }) => {
   return (
     <div className={styles.selectWrapper}>
       <Select
-        onChange={e => updateValue}
+        onChange={e => updateValue(e)}
         defaultValue={data[0]}
         defaultMenuIsOpen={isMenuOpen}
         components={{

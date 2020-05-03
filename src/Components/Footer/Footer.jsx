@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <div class="navbar">
+    <div className="navbar">
       <div>
         <a
           className="headerLlnk"

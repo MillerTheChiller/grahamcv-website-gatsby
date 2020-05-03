@@ -4,21 +4,6 @@
   align-items: center;
 }
 
-h1 {
-  color: #4795b0;
-}
-
-img {
-  width: 100%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-iframe {
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
 .thingsContainer {
   margin-bottom: 5%;
   width: 100vw;

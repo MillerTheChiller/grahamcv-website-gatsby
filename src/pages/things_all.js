@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../Components/Layout/Layout"
-import styles from "./things.module.css"
+import styles from "./thingsAll.module.css"
 import Img from "gatsby-image"
 import FavouriteThing from "../Components/FavouriteThing/FavouriteThing"
+import { graphQLQuery } from "../utils/constants"
+import { graphql } from "gatsby"
 
 const ThingsAll = ({ data }) => {
   const books = data.books.edges
@@ -203,5 +205,4 @@ export const query = graphql`
     }
   }
 `
-
 export default ThingsAll
