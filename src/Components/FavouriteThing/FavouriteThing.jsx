@@ -1,19 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styles from "./FavouriteThing.module.css"
+import Img from "gatsby-image"
 
-const Thing = ({ type, data }) => {
+const FavouriteThing = ({ favouriteThingData }) => {
+  const type = favouriteThingData.node.frontmatter.type
+  const { frontmatter } = favouriteThingData.node
+  const { link_to, title } = frontmatter
   let typeComponent
+  let featuredImgFluid
   switch (type) {
     case "book":
       // code block
-      const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
       typeComponent = (
         <a target="_blank" href={link_to}>
           <Img fluid={featuredImgFluid} />
         </a>
       )
       break
-    case "video":
+    case "youtube":
       // code block
       typeComponent = (
         <iframe
@@ -25,11 +31,11 @@ const Thing = ({ type, data }) => {
         ></iframe>
       )
       break
-    case "spotify":
+    case "music":
       // code block
       typeComponent = (
         <iframe
-          src={data.link_to}
+          src={link_to}
           width="100%"
           height="380"
           frameBorder="0"
@@ -40,7 +46,7 @@ const Thing = ({ type, data }) => {
       break
     case "movie":
       // code block
-      const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
       typeComponent = (
         <a target="_blank" href={link_to}>
           <Img fluid={featuredImgFluid} />
@@ -49,7 +55,7 @@ const Thing = ({ type, data }) => {
       break
     case "podcast":
       // code block
-      const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
 
       typeComponent = (
         <a target="_blank" href={link_to}>
@@ -59,7 +65,17 @@ const Thing = ({ type, data }) => {
       break
     case "blog":
       // code block
-      const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+
+      typeComponent = (
+        <a target="_blank" href={link_to}>
+          <Img fluid={featuredImgFluid} />
+        </a>
+      )
+      break
+    case "game":
+      // code block
+      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
 
       typeComponent = (
         <a target="_blank" href={link_to}>
@@ -69,6 +85,7 @@ const Thing = ({ type, data }) => {
       break
     case "other":
       // code block
+      const { subtitle } = frontmatter
       typeComponent = (
         <a target="_blank" href={link_to}>
           <div class={styles.box}>
@@ -81,8 +98,9 @@ const Thing = ({ type, data }) => {
     default:
     // code block
   }
+  return typeComponent
 }
 
-Thing.propTypes = {}
+FavouriteThing.propTypes = {}
 
-export default Thing
+export default FavouriteThing

@@ -5,15 +5,11 @@ const Header = () => {
   return (
     <div className="navbar header">
       <div className="name">
-        <a className="navbar-name" href="./">
-          Graham Miller
-        </a>
+        <Link to="/">Graham Miller</Link>
       </div>
       <div className="navlinks">
         <div>
-          <a className="headerLink" href="./things/things.html">
-            <Link to="/things/"> Things I like </Link>
-          </a>
+          <Link to="/thigns_all/"> Things I like </Link>
         </div>
       </div>
     </div>

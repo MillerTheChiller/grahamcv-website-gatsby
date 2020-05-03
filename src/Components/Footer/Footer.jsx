@@ -5,19 +5,19 @@ const Footer = () => {
     <div class="navbar">
       <div>
         <a
-          class="headerLlnk"
+          className="headerLlnk"
           href="https://www.linkedin.com/in/graham-miller-68375b113/"
         >
           LinkedIn
         </a>
       </div>
       <div>
-        <a class="headerlink" href="https://github.com/grahamMiller96">
+        <a className="headerlink" href="https://github.com/grahamMiller96">
           GitHub
         </a>
       </div>
       <div>
-        <a class="headerlink" href="mailto: graham.miller@queensu.ca">
+        <a className="headerlink" href="mailto: graham.miller@queensu.ca">
           Email
         </a>
       </div>

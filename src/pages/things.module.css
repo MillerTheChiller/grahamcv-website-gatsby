@@ -60,6 +60,19 @@ iframe {
   text-decoration: none;
 }
 
+.thingsQueryRow {
+  display: flex;
+}
+
+.thingsQueryRow h1 {
+  margin: 0 5px;
+}
+
+.selectWrapper {
+  width: 200px;
+  margin-top: -6px;
+}
+
 @media only screen and (max-width: 760px) {
   .columns {
     flex-direction: column;
