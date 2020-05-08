@@ -20,23 +20,23 @@
   font-size: 18px;
   text-decoration: none;
   padding: 10px;
-  color: #4795b0;
+  color: #827fdc;
   -webkit-transition: 0.4s; /* Safari */
   transition: 0.4s;
 }
 
 .navbar a:hover {
   color: white;
-  background-color: #4795b0;
+  background-color: #827fdc;
 }
 
 @media only screen and (max-width: 555px) {
-  .navbar,
+  /* .navbar,
   .navlinks {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+  } */
   .navbar a {
     padding: 5px 10px;
   }

@@ -17,6 +17,9 @@
   .thingsQueryRow {
     width: 250px;
     justify-content: left;
-    margin: auto;
+    margin: 0 10px;
+  }
+  .thingsQueryReturn {
+    margin: 0 10px;
   }
 }

@@ -13,3 +13,9 @@
   width: 250px;
   margin: 5px;
 }
+
+@media only screen and (max-width: 760px) {
+  .displayGallery {
+    justify-content: left;
+  }
+}

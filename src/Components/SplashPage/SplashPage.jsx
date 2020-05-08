@@ -3,11 +3,10 @@ import PropTypes from "prop-types"
 import styles from "./SplashPage.module.css"
 
 const SplashPage = ({ splashPageData }) => {
-  console.log(splashPageData)
   return (
     <div className={styles.splash}>
-      <h1 className={styles.bigheader}>{splashPageData.frontmatter.title}</h1>
-      <h3 className={styles.tagline}>{splashPageData.frontmatter.tagline}</h3>
+      <h1 className={styles.bigHeader}>{splashPageData.frontmatter.title}</h1>
+      <h3 className={styles.tagLine}>{splashPageData.frontmatter.tagline}</h3>
     </div>
   )
 }

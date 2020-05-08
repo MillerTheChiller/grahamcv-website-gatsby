@@ -1,12 +1,29 @@
-.bigheader {
-  font-size: 60px;
-  color: #4795b0;
+.bigHeader {
+  font-size: 4em;
   margin-bottom: 20px;
   padding: 0;
 }
 
-.tagline {
-  font-size: 40px;
+.tagLine {
+  font-size: 2em;
   color: #b8b7ba;
   margin-top: 15px;
+}
+
+@media only screen and (max-width: 555px) {
+  .bigHeader {
+    text-align: left;
+  }
+  .tagLine {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .bigHeader {
+    font-size: 3em;
+  }
+  .tagLine {
+    font-size: 1.5em;
+  }
 }

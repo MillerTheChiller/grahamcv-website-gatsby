@@ -15,22 +15,22 @@ const ThingsAll = ({ data }) => {
   const other = data.other.edges
   return (
     <Layout>
-      <div class={styles.columns}>
-        <div class={styles.column}>
+      <div className={styles.columns}>
+        <div className={styles.column}>
           <FavouriteThing favouriteThingData={books[4]} />
           <FavouriteThing favouriteThingData={youtube[0]} />
           <FavouriteThing favouriteThingData={music[0]} />
           <FavouriteThing favouriteThingData={podcast[0]} />
         </div>
 
-        <div class={styles.column}>
+        <div className={styles.column}>
           <FavouriteThing favouriteThingData={music[1]} />
           <FavouriteThing favouriteThingData={books[0]} />
           <FavouriteThing favouriteThingData={youtube[1]} />
           <FavouriteThing favouriteThingData={music[2]} />
         </div>
 
-        <div class={styles.column}>
+        <div classNama={styles.column}>
           <FavouriteThing favouriteThingData={blogs[0]} />
           <FavouriteThing favouriteThingData={movies[0]} />
           <FavouriteThing favouriteThingData={games[0]} />

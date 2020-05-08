@@ -27,7 +27,7 @@ const FavouriteThing = ({ favouriteThingData }) => {
           height="200"
           src={link_to}
           frameBorder="0"
-          allowTransparency
+          allowtransparency="true"
         ></iframe>
       )
       break
@@ -39,7 +39,7 @@ const FavouriteThing = ({ favouriteThingData }) => {
           width="100%"
           height="380"
           frameBorder="0"
-          allowTransparency="true"
+          allowtransparency="true"
           allow="encrypted-media"
         ></iframe>
       )

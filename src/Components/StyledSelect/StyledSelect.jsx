@@ -9,7 +9,7 @@ const colourStyles = {
   }),
   control: styles => ({
     ...styles,
-    color: "4795b0",
+    color: "#827fdc",
     border: "none",
     backgroundColor: "#1e2125",
   }),
@@ -17,14 +17,14 @@ const colourStyles = {
     return {
       ...styles,
       color: "#4795b0",
-      color: isSelected ? "#1e2125" : "#4795b0",
-      color: isFocused ? "1e2125" : "#4795b0",
+      color: isSelected ? "#1e2125" : "#827fdc",
+      color: isFocused ? "1e2125" : "#827fdc",
 
-      backgroundColor: isFocused ? "#4795b0" : "#1e2125",
+      backgroundColor: isFocused ? "#827fdc" : "#1e2125",
       ":active": {
         ...styles[":active"],
-        color: isSelected ? "#1e2125" : "#4795b0",
-        backgroundColor: isSelected ? "#4795b0" : "#1e2125",
+        color: isSelected ? "#1e2125" : "#827fdc",
+        backgroundColor: isSelected ? "#827fdc" : "#1e2125",
       },
     }
   },

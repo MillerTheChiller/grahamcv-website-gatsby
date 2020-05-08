@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <div className="navbar header">
       <div className="name">
-        <Link to="/">Graham Miller</Link>
+        <Link to="/">Graham</Link>
       </div>
       <div className="navlinks">
         <div>
-          <Link to="/things/"> Things I like </Link>
+          <Link to="/things/"> Things </Link>
         </div>
       </div>
     </div>
