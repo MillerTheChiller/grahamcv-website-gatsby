@@ -41,7 +41,7 @@ function Things({ data }) {
         <div>
           <p className={`${styles.disclaimer} ${styles.disclaimerContent}`}>
             Not a complete comprehensive list of my favourites. Click the
-            picture for more details!
+            pictures for more details!
           </p>
         </div>
         <div className={styles.thingsQueryReturn}>
