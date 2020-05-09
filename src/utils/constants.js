@@ -1,11 +1,8 @@
-const amount_options = [
-  { value: "one", label: "is one" },
-  { value: "all", label: "are all" },
-]
+const amount_options = ["one", "all"]
 
 const type_options = [
   { value: "books", label: "books" },
-  { value: "musicians", label: "musicians" },
+  { value: "albums", label: "albums" },
   { value: "movies", label: "movies" },
   { value: "blogs", label: "blogs" },
   { value: "videos", label: "videos" },

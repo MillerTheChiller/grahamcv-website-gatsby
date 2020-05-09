@@ -9,14 +9,6 @@
   width: 100vw;
 }
 
-.thingsContainer a {
-  text-decoration: none;
-}
-.thingsContainer a:hover {
-  text-decoration: underline;
-  text-decoration-color: #4795b0;
-}
-
 .thingsHeader {
   width: 88vw;
 }

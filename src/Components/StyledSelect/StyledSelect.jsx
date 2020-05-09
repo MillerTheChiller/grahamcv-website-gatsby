@@ -11,7 +11,9 @@ const colourStyles = {
     ...styles,
     color: "#827fdc",
     border: "none",
+    borderBottom: "3px solid white",
     backgroundColor: "#1e2125",
+    borderRadius: "0px",
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {
@@ -53,6 +55,7 @@ const colourStyles = {
     fontSize: "2rem",
     color: "white",
     lineHeight: "35px",
+    textAlign: "center",
   }),
   placeholder: styles => ({
     ...styles,
