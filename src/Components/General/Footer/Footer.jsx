@@ -12,7 +12,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <a className="headerlink" href="https://github.com/grahamMiller96">
+        <a className="headerlink" href="https://github.com/millerthechiller">
           GitHub
         </a>
       </div>

@@ -1,24 +1,30 @@
 import React, { useState } from "react"
-import Layout from "../Components/Layout/Layout"
+import Layout from "../Components/General/Layout/Layout"
 import StyledSelect from "../Components/StyledSelect/StyledSelect"
 import ThingsDisplay from "../Components/ThingsDisplay/ThingsDisplay"
 import styles from "./things.module.css"
 import { amount_options, type_options } from "../utils/constants"
 import { graphql } from "gatsby"
+import Button from "../Components/General/Button/Button"
 
 function Things({ data }) {
   const [amount, setAmount] = useState(amount_options[0])
   const [type, setType] = useState(type_options[0])
-
+  console.log(amount)
   return (
     <Layout>
       <div className={styles.thingsQueryRow}>
-        <h1>What</h1>
+        <h1>What {amount === "all" ? "are" : "is"}</h1>
         <div className={styles.selectWrapper}>
-          <StyledSelect
-            updateValue={setAmount}
-            isMenuOpen={false}
-            data={amount_options}
+          <Button
+            onClick={setAmount}
+            isActive={"one" === amount}
+            buttonContent="one"
+          />
+          <Button
+            onClick={setAmount}
+            isActive={"all" === amount}
+            buttonContent="all"
           />
         </div>
         <h1> of your favourite </h1>
@@ -32,7 +38,7 @@ function Things({ data }) {
         <h1>?</h1>
       </div>
       <div className={styles.thingsQueryReturn}>
-        <ThingsDisplay amount={amount.value} thingData={data[type.value]} />
+        <ThingsDisplay amount={amount} thingData={data[type.value]} />
       </div>
     </Layout>
   )
