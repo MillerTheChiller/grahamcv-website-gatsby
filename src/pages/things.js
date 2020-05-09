@@ -10,35 +10,43 @@ import Button from "../Components/General/Button/Button"
 function Things({ data }) {
   const [amount, setAmount] = useState(amount_options[0])
   const [type, setType] = useState(type_options[0])
-  console.log(amount)
   return (
     <Layout>
-      <div className={styles.thingsQueryRow}>
-        <h1>What {amount === "all" ? "are" : "is"}</h1>
-        <div className={styles.selectWrapper}>
-          <Button
-            onClick={setAmount}
-            isActive={"one" === amount}
-            buttonContent="one"
-          />
-          <Button
-            onClick={setAmount}
-            isActive={"all" === amount}
-            buttonContent="all"
-          />
+      <div className={styles.pageWrapper}>
+        <div className={styles.thingsQueryRow}>
+          <h1>What {amount === "all" ? "are" : "is"}</h1>
+          <div className={styles.selectWrapper}>
+            <Button
+              onClick={setAmount}
+              isActive={"one" === amount}
+              buttonContent="one"
+            />
+            <Button
+              onClick={setAmount}
+              isActive={"all" === amount}
+              buttonContent="all"
+            />
+          </div>
+          <h1> of your favourite </h1>
+          <div className={styles.selectWrapper}>
+            <StyledSelect
+              updateValue={setType}
+              isMenuOpen={false}
+              data={type_options}
+            />
+          </div>
+          <h1>?</h1>
+          <p className={styles.disclaimer}>*</p>
         </div>
-        <h1> of your favourite </h1>
-        <div className={styles.selectWrapper}>
-          <StyledSelect
-            updateValue={setType}
-            isMenuOpen={false}
-            data={type_options}
-          />
+        <div>
+          <p className={`${styles.disclaimer} ${styles.disclaimerContent}`}>
+            Not a complete comprehensive list of my favourites. Click the
+            pictures for more details!
+          </p>
         </div>
-        <h1>?</h1>
-      </div>
-      <div className={styles.thingsQueryReturn}>
-        <ThingsDisplay amount={amount} thingData={data[type.value]} />
+        <div className={styles.thingsQueryReturn}>
+          <ThingsDisplay amount={amount} thingData={data[type.value]} />
+        </div>
       </div>
     </Layout>
   )

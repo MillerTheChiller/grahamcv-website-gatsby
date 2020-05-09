@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styles from "./FavouriteThing.module.css"
 import Img from "gatsby-image"
 
@@ -8,7 +7,6 @@ const FavouriteThing = ({ favouriteThingData }) => {
   const { frontmatter } = favouriteThingData.node
   const { link_to, title } = frontmatter
   let typeComponent
-  let featuredImgFluid
   let wrapperClass = styles.favouriteThingWrapper
 
   let component_type
@@ -29,9 +27,9 @@ const FavouriteThing = ({ favouriteThingData }) => {
   switch (component_type) {
     case "picture":
       // code block
-      featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
+      const featuredImgFluid = frontmatter.image_src.childImageSharp.fluid
       typeComponent = (
-        <a target="_blank" href={link_to}>
+        <a target="_blank" rel="noopener noreferrer" href={link_to}>
           <Img fluid={featuredImgFluid} />
         </a>
       )
@@ -40,6 +38,7 @@ const FavouriteThing = ({ favouriteThingData }) => {
       // code block
       typeComponent = (
         <iframe
+          title={title}
           width="100%"
           height="200"
           src={link_to}
@@ -53,8 +52,8 @@ const FavouriteThing = ({ favouriteThingData }) => {
       const { subtitle } = frontmatter
       wrapperClass = styles.essayDisplay
       typeComponent = (
-        <a target="_blank" href={link_to}>
-          <div class={styles.box}>
+        <a target="_blank" rel="noopener noreferrer" href={link_to}>
+          <div className={styles.box}>
             <h1>{title}</h1>
             <h3>{subtitle}</h3>
           </div>
