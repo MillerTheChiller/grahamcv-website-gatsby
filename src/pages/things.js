@@ -150,7 +150,7 @@ export const query = graphql`
         }
       }
     }
-    musicians: allMarkdownRemark(
+    albums: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/content/things/things_content/music/" }
       }

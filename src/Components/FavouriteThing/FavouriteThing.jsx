@@ -19,9 +19,10 @@ const FavouriteThing = ({ favouriteThingData }) => {
     media_type === "game"
   ) {
     component_type = "picture"
-  } else if (media_type === "youtube" || media_type === "music") {
+  } else if (media_type === "youtube") {
     component_type = "embedded"
   } else {
+    media_type === "album"
     component_type = "other"
   }
 
