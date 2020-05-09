@@ -4,15 +4,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.favouriteThingWrapper {
-  width: 250px;
-  margin: 5px;
-}
-
-.thingsDisplay {
-  width: 250px;
-  margin: 5px;
-}
 
 @media only screen and (max-width: 760px) {
   .displayGallery {

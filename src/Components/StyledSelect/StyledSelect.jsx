@@ -13,6 +13,7 @@ const colourStyles = {
     border: "none",
     borderBottom: "3px solid white",
     backgroundColor: "#1e2125",
+    borderRadius: "0px",
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {

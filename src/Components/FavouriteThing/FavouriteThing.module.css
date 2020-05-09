@@ -1,8 +1,14 @@
 .box {
   text-align: center;
-  border: 4px solid white;
+  border: 3px solid white;
   padding-bottom: 10px;
   color: white;
+  padding: 0 10px;
+}
+
+.box h1,
+.box h3 {
+  margin: 5px;
 }
 
 .box:hover {
@@ -18,4 +24,21 @@ img {
 iframe {
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+.favouriteThingWrapper {
+  width: 275px;
+  margin: 5px;
+}
+
+.thingsDisplay {
+  width: 250px;
+  margin: 5px;
+}
+
+.essayDisplay {
+  min-width: 250px;
+  max-width: 350px;
+  height: 200px;
+  margin: 5px;
 }

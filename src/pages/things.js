@@ -77,13 +77,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            image_src {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            subtitle
             link_to
             type
           }

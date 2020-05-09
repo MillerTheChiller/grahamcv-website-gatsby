@@ -1,6 +1,6 @@
 ---
 title: "Philosophize This"
 image_src: "philoThis.jpg"
-link_to: "LINK_TO_WEBSITE"
+link_to: "http://philosophizethis.org/"
 type: "podcast"
 ---
