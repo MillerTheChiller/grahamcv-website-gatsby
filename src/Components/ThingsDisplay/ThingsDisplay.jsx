@@ -8,12 +8,10 @@ const ThingsDisplay = ({ amount, thingData }) => {
       <div className={styles.displayGallery}>
         {thingData.edges.map(data => {
           return (
-            <div className={styles.favouriteThingWrapper}>
-              <FavouriteThing
-                key={data.node.frontmatter.title}
-                favouriteThingData={data}
-              />
-            </div>
+            <FavouriteThing
+              key={data.node.frontmatter.title}
+              favouriteThingData={data}
+            />
           )
         })}
       </div>
@@ -22,11 +20,7 @@ const ThingsDisplay = ({ amount, thingData }) => {
     const thingDataLength = thingData.edges.length
     const randNumber = Math.floor(Math.random() * thingDataLength)
     const thing = thingData.edges[randNumber]
-    return (
-      <div className={styles.thingsDisplay}>
-        <FavouriteThing favouriteThingData={thing} />
-      </div>
-    )
+    return <FavouriteThing favouriteThingData={thing} />
   }
 }
 
