@@ -21,6 +21,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            quickabout
             tagline
           }
         }

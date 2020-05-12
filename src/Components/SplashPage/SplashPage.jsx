@@ -6,6 +6,9 @@ const SplashPage = ({ splashPageData }) => {
   return (
     <div className={styles.splash}>
       <h1 className={styles.bigHeader}>{splashPageData.frontmatter.title}</h1>
+      <h3 className={styles.quickAbout}>
+        {splashPageData.frontmatter.quickabout}
+      </h3>
       <h3 className={styles.tagLine}>{splashPageData.frontmatter.tagline}</h3>
     </div>
   )
