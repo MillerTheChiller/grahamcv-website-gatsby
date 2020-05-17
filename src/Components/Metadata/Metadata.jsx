@@ -11,7 +11,7 @@ const Metadata = () => {
       <meta name="keywords" content={metadata.keywords} />
       <meta name="name" content={metadata.name} />
       <meta name="location" content={metadata.location} />
-      <link rel="canonical" href="http://grahamhenrymiller.com" />
+      <link rel="canonical" href="https://grahamhenrymiller.com" />
     </Helmet>
   )
 }
