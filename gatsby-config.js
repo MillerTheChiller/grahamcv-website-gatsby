@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     "gatsby-transformer-remark",
     `gatsby-plugin-manifest`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
