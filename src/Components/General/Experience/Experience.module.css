@@ -1,0 +1,16 @@
+.experience {
+  background-color: green;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.location {
+  background-color: pink;
+  width: 30%;
+}
+
+.about {
+  background-color: purple;
+  width: 50%;
+}
