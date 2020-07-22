@@ -1,25 +1,11 @@
 import React from "react"
+import styles from "./footer.module.css"
 
 const Footer = () => {
   return (
-    <div className="navbar">
+    <div className={styles.footer}>
       <div>
-        <a
-          className="headerLlnk"
-          href="https://www.linkedin.com/in/graham-miller-68375b113/"
-        >
-          LinkedIn
-        </a>
-      </div>
-      <div>
-        <a className="headerlink" href="https://github.com/millerthechiller">
-          GitHub
-        </a>
-      </div>
-      <div>
-        <a className="headerlink" href="mailto: graham.miller@queensu.ca">
-          Email
-        </a>
+        <h3 className={styles.footerEmojis}>🤠 🇨🇦</h3>
       </div>
     </div>
   )

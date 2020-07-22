@@ -1,14 +1,18 @@
 .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
+  background-color: yellow;
 }
+
 .navbar .name a {
   font-size: 30px;
 }
-.header {
-  justify-content: space-between;
-}
+
 .footer {
   justify-content: flex-start;
 }
