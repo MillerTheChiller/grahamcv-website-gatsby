@@ -1,0 +1,6 @@
+.favouriteBooksWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0px 30px;
+}

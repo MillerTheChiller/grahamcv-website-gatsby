@@ -1,0 +1,11 @@
+.button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+}
+
+.button:hover {
+  width: 145px;
+  border-left: 5px solid orange;
+}

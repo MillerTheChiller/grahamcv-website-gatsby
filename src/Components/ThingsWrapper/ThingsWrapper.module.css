@@ -1,0 +1,13 @@
+.thingsWrapper {
+  height: 55vh;
+  background-color: white;
+}
+
+.thingsControlGroup {
+  display: flex;
+}
+
+.thingsNavigation {
+  display: flex;
+  flex-direction: column;
+}

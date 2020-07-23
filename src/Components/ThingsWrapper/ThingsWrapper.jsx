@@ -1,30 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styles from "./ThingsWrapper.module.css"
+import ButtonTab from "../ButtonTab/ButtonTab"
+import FavouriteBooks from "../FavouriteBooks/FavouriteBooks"
+
 const ThingsWrapper = () => {
-  const data = useStaticQuery(graphql`
-    query BookQuery {
-      books: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "/content/things/things_content/books/" }
-        }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              link_to
-              type
-            }
-          }
-        }
-      }
-    }
-  `)
-  console.log("Data", data)
-  console.log(data)
+  const [tabToDisplay, setTabToDisplay] = useState("Books")
   return (
-    <div>
-      <h3> Hello </h3>
+    <div className={styles.thingsWrapper}>
+      <h1> Some of my favourite things </h1>
+      <div className={styles.thingsControlGroup}>
+        <div className={styles.thingsNavigation}>
+          <ButtonTab
+            onClick={() => setTabToDisplay("books")}
+            buttonContent="Books"
+          />
+          <ButtonTab
+            onClick={() => setTabToDisplay("videos")}
+            buttonContent="Videos"
+          />
+          <ButtonTab
+            onClick={() => setTabToDisplay("albums")}
+            buttonContent="Albums"
+          />
+          <ButtonTab
+            onClick={() => setTabToDisplay("Articles")}
+            buttonContent="Articles & Essays"
+          />
+          <ButtonTab
+            onClick={() => setTabToDisplay("Everything Else")}
+            buttonContent="Everything Else"
+          />
+        </div>
+        <div className={styles.thingsDisplay}>
+          <FavouriteBooks />
+        </div>
+      </div>
     </div>
   )
 }

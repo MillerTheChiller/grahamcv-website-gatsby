@@ -1,7 +1,7 @@
 ---
 title: "Americanah"
-image_src: "americanah.jpg"
+author: "Chimamanda Ngozi Adichie"
 link_to: "https://www.goodreads.com/book/show/15796700-americanah"
-type: "book"
+type: "Very lovely book"
 year_read: "2019"
 ---
