@@ -31,13 +31,14 @@ const FavouriteBooks = () => {
 
   return (
     <div className={styles.favouriteBooksWrapper}>
+      <a href="https://www.goodreads.com/user/show/106116259-graham">
+        My GoodReads Account
+      </a>
+      <p className={styles.secondaryLine}>(Comprehensive List)</p>
       {parsedArray &&
         parsedArray.map(element => {
           return <FavouriteThing component_type="book" dataPoint={element} />
         })}
-      <a href="https://www.goodreads.com/user/show/106116259-graham">
-        ...Find the rest on my Goodreads Account
-      </a>
     </div>
   )
 }

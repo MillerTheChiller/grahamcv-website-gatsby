@@ -4,3 +4,7 @@
   flex-direction: column;
   margin: 0px 30px;
 }
+
+.secondaryLine {
+  color: white;
+}

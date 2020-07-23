@@ -1,40 +1,59 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import styles from "./ThingsWrapper.module.css"
 import ButtonTab from "../ButtonTab/ButtonTab"
 import FavouriteBooks from "../FavouriteBooks/FavouriteBooks"
 
 const ThingsWrapper = () => {
-  const [tabToDisplay, setTabToDisplay] = useState("Books")
+  const [tabToDisplay, setTabToDisplay] = useState(<FavouriteBooks />)
+  const [currentTab, setCurrentTab] = useState("Books")
+
   return (
     <div className={styles.thingsWrapper}>
       <h1> Some of my favourite things </h1>
       <div className={styles.thingsControlGroup}>
         <div className={styles.thingsNavigation}>
           <ButtonTab
-            onClick={() => setTabToDisplay("books")}
+            onClick={() => {
+              setTabToDisplay(<FavouriteBooks />)
+              setCurrentTab("Books")
+            }}
             buttonContent="Books"
+            tabActive={currentTab === "Books"}
           />
           <ButtonTab
-            onClick={() => setTabToDisplay("videos")}
+            onClick={() => {
+              setTabToDisplay("Videos")
+              setCurrentTab("Videos")
+            }}
             buttonContent="Videos"
+            tabActive={currentTab === "Videos"}
           />
           <ButtonTab
-            onClick={() => setTabToDisplay("albums")}
+            onClick={() => {
+              setTabToDisplay("Albums")
+              setCurrentTab("Albums")
+            }}
             buttonContent="Albums"
+            tabActive={currentTab === "Albums"}
           />
           <ButtonTab
-            onClick={() => setTabToDisplay("Articles")}
+            onClick={() => {
+              setTabToDisplay("Articles")
+              setCurrentTab("Articles & Essays")
+            }}
             buttonContent="Articles & Essays"
+            tabActive={currentTab === "Articles & Essays"}
           />
           <ButtonTab
-            onClick={() => setTabToDisplay("Everything Else")}
+            onClick={() => {
+              setCurrentTab("Everything Else")
+              setTabToDisplay("Everything Else")
+            }}
             buttonContent="Everything Else"
+            tabActive={currentTab === "Everything Else"}
           />
         </div>
-        <div className={styles.thingsDisplay}>
-          <FavouriteBooks />
-        </div>
+        <div className={styles.thingsDisplay}>{tabToDisplay}</div>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
 import React from "react"
 import styles from "./ButtonTab.module.css"
+import cx from "classnames"
 
-const ButtonTab = ({ buttonContent, onClick }) => {
+const ButtonTab = ({ buttonContent, onClick, tabActive }) => {
+  const buttonClass = cx(
+    styles.button,
+    tabActive ? styles.active : styles.inactive
+  )
   return (
-    <button
-      className={styles.button}
-      onClick={onClick && onClick}
-      type="button"
-    >
+    <button className={buttonClass} onClick={onClick && onClick} type="button">
       {buttonContent}
     </button>
   )

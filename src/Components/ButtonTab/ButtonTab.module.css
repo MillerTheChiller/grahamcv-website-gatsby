@@ -1,11 +1,29 @@
 .button {
-  width: 150px;
   height: 50px;
   background: none;
   border: none;
+  color: white;
+  text-align: left;
+  padding-left: 30px;
 }
 
 .button:hover {
-  width: 145px;
-  border-left: 5px solid orange;
+  color: #827fdc;
+  padding-left: 50px;
+}
+
+.button:focus {
+  outline: none;
+  color: #827fdc;
+}
+
+.active {
+  width: 200px;
+  border-left: 5px solid #827fdc;
+  color: #827fdc;
+}
+
+.inactive {
+  width: 200px;
+  border-left: 5px solid #b8b7ba;
 }

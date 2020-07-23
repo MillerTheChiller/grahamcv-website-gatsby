@@ -15,7 +15,7 @@ const FavouriteThing = ({ dataPoint, component_type }) => {
           <a href={link_to}>
             {title}, by {author}
           </a>
-          <p>({type})</p>
+          <p className={styles.secondaryLine}>({type})</p>
         </>
       )
       break
