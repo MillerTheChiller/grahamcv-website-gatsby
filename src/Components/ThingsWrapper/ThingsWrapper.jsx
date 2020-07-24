@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styles from "./ThingsWrapper.module.css"
 import ButtonTab from "../ButtonTab/ButtonTab"
 import FavouriteBooks from "../FavouriteBooks/FavouriteBooks"
+import FavouriteAlbums from "../FavouriteAlbums/FavouriteAlbums"
 
 const ThingsWrapper = () => {
   const [tabToDisplay, setTabToDisplay] = useState(<FavouriteBooks />)
@@ -30,7 +31,7 @@ const ThingsWrapper = () => {
           />
           <ButtonTab
             onClick={() => {
-              setTabToDisplay("Albums")
+              setTabToDisplay(<FavouriteAlbums />)
               setCurrentTab("Albums")
             }}
             buttonContent="Albums"
