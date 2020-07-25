@@ -6,11 +6,13 @@ import Hobbies from "../Components/Hobbies/Hobbies"
 import { graphql } from "gatsby"
 
 export default ({ data }) => {
-  const splashPageData = data.allMarkdownRemark.edges[0].node
+  console.log(data)
+  const splashPageData = data.splash.edges[0].node.frontmatter
+  const aboutData = data.about.edges[0].node
   return (
     <Layout>
       <SplashPage splashPageData={splashPageData} />
-      <About />
+      <About aboutData={aboutData} />
       <Hobbies />
     </Layout>
   )
@@ -18,8 +20,33 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    splash: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/splash-page/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tagline
+          }
+        }
+      }
+    }
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            firstdraft
+          }
+          html
+        }
+      }
+    }
+    hobbies: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/about/" } }
     ) {
       edges {
         node {

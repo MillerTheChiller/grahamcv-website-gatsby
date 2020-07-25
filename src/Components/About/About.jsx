@@ -1,9 +1,15 @@
 import React from "react"
+import styles from "./about.module.css"
 
-const About = () => {
+const About = ({ aboutData }) => {
+  const { frontmatter, html } = aboutData
+  const { firstdraft, title } = frontmatter
+  console.log(html)
   return (
     <div>
-      <h1> Who Am I?</h1>
+      <h1>{title}</h1>
+      <p className={styles.firstTake}>{firstdraft}</p>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
 }
