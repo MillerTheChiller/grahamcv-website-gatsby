@@ -1,4 +1,4 @@
 ---
-title: "👋 Howdy"
-tagline: "My name is Graham and I'm passionate about delivering great user experiences."
+title: "👋 Howdy!"
+tagline: "I'm a developer, I live in Toronto, and I'm new in town."
 ---

@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../Components/General/Layout/Layout"
-import ThingsWrapper from "../Components/ThingsWrapper/ThingsWrapper"
 import SplashPage from "../Components/SplashPage/SplashPage"
+import About from "../Components/About/About"
+import Hobbies from "../Components/Hobbies/Hobbies"
 import { graphql } from "gatsby"
 
 export default ({ data }) => {
@@ -9,7 +10,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <SplashPage splashPageData={splashPageData} />
-      <ThingsWrapper />
+      <About />
+      <Hobbies />
     </Layout>
   )
 }
