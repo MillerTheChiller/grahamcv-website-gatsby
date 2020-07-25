@@ -3,7 +3,6 @@ import SpecificHobby from "../SpecificHobby/SpecificHobby"
 import styles from "./Hobbies.module.css"
 
 const Hobbies = ({ hobbyData }) => {
-  console.log(hobbyData)
   const hobbyArray = hobbyData.map(element => {
     return {
       title: element.node.frontmatter.title,
@@ -12,7 +11,6 @@ const Hobbies = ({ hobbyData }) => {
       html: element.node.html,
     }
   })
-  console.log(hobbyArray)
   return (
     <div className={styles.detailContainer}>
       <h1>What I like Doing / What Interests Me</h1>

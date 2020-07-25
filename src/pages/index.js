@@ -6,7 +6,6 @@ import Hobbies from "../Components/Hobbies/Hobbies"
 import { graphql } from "gatsby"
 
 export default ({ data }) => {
-  console.log(data)
   const splashPageData = data.splash.edges[0].node.frontmatter
   const aboutData = data.about.edges[0].node
   const hobbyData = data.hobbies.edges
