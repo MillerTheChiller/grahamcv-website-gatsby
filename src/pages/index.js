@@ -9,11 +9,12 @@ export default ({ data }) => {
   console.log(data)
   const splashPageData = data.splash.edges[0].node.frontmatter
   const aboutData = data.about.edges[0].node
+  const hobbyData = data.hobbies.edges
   return (
     <Layout>
       <SplashPage splashPageData={splashPageData} />
       <About aboutData={aboutData} />
-      <Hobbies />
+      <Hobbies hobbyData={hobbyData} />
     </Layout>
   )
 }
@@ -46,14 +47,16 @@ export const query = graphql`
       }
     }
     hobbies: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/about/" } }
+      filter: { fileAbsolutePath: { regex: "/content/hobbies/" } }
     ) {
       edges {
         node {
           frontmatter {
             title
-            tagline
+            personalLink
+            personalLinkText
           }
+          html
         }
       }
     }

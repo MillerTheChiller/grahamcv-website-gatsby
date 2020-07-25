@@ -5,4 +5,4 @@ firstdraft: I'm a 24 year old living in Toronto. I'm also finding it incredibly 
 
 I'm a 24 year old living in Toronto. I've been a full stack developer for just over two (2) years. I'm still very new to the industry and I still have an incredible amount to learn. Currently what I like using is [React](https://reactjs.org/) (Went to ReactConf 2019, probably will talk to you at length about the genius design of react), [Express](https://expressjs.com/) and [Django](https://www.djangoproject.com/).
 
-Although I'm full stack my heart fully is in the UX side of development. People are fascinating and for me when it comes to technology nothing is more interesting than how we use it, react to it and evolve along side of it.
+Although I'm full stack, my passion & enthusiasm comes from the UX side of development. People are fascinating and for me when it comes to technology nothing is more interesting than how we use it, react to it and evolve along side of it.

@@ -5,7 +5,20 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
-        <h3 className={styles.footerEmojis}>🤠 🇨🇦</h3>
+        <span
+          aria-label="Cowboy Emoji"
+          className={styles.footerEmojis}
+          role="img"
+        >
+          🤠
+        </span>
+        <span
+          aria-label="Canada Flag"
+          className={styles.footerEmojis}
+          role="img"
+        >
+          🇨🇦
+        </span>
       </div>
     </div>
   )

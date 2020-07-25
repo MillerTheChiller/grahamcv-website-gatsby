@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "things-content",
-        path: `${__dirname}/content/things/things_content`,
+        name: "hobbies",
+        path: `${__dirname}/content/hobbies`,
       },
     },
     {

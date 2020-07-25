@@ -8,16 +8,16 @@ body {
 }
 
 h1 {
-  color: #827fdc;
+  color: #dc827f;
   font-size: 3em;
 }
 p {
   font-size: 1.5em;
-  color: white;
+  color: #d3d3d3;
 }
 
 a {
-  color: #827fdc;
+  color: #dc827f;
 }
 
 h1,

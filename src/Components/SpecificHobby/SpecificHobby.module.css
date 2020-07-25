@@ -1,0 +1,17 @@
+.hobbyWrapper {
+  margin: 25px 0;
+}
+
+.hobbyHeader {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.hobbyHeader p {
+  margin: 0;
+}
+
+.title {
+  color: white;
+}

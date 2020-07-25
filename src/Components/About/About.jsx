@@ -6,7 +6,7 @@ const About = ({ aboutData }) => {
   const { firstdraft, title } = frontmatter
   console.log(html)
   return (
-    <div>
+    <div className={styles.detailsContainer}>
       <h1>{title}</h1>
       <p className={styles.firstTake}>{firstdraft}</p>
       <div dangerouslySetInnerHTML={{ __html: html }} />
