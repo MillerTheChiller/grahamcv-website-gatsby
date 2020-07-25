@@ -13,9 +13,22 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    "gatsby-transformer-remark",
     `gatsby-plugin-manifest`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noopener noreferrer",
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -40,8 +53,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "things-content",
-        path: `${__dirname}/content/things/things_content`,
+        name: "hobbies",
+        path: `${__dirname}/content/hobbies`,
       },
     },
     {
@@ -56,7 +69,7 @@ module.exports = {
         name: "Graham's Website",
         short_name: "Graham's Website",
         start_url: "/",
-        icon: "src/images/graham_favicon.ico",
+        icon: "src/images/boring_normal_favicon.ico",
       },
     },
   ],

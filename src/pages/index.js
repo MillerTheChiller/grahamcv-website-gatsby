@@ -1,20 +1,27 @@
 import React from "react"
 import Layout from "../Components/General/Layout/Layout"
 import SplashPage from "../Components/SplashPage/SplashPage"
+import About from "../Components/About/About"
+import Hobbies from "../Components/Hobbies/Hobbies"
 import { graphql } from "gatsby"
 
 export default ({ data }) => {
-  const splashPageData = data.allMarkdownRemark.edges[0].node
+  console.log(data)
+  const splashPageData = data.splash.edges[0].node.frontmatter
+  const aboutData = data.about.edges[0].node
+  const hobbyData = data.hobbies.edges
   return (
     <Layout>
       <SplashPage splashPageData={splashPageData} />
+      <About aboutData={aboutData} />
+      <Hobbies hobbyData={hobbyData} />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    splash: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/splash-page/" } }
     ) {
       edges {
@@ -23,6 +30,33 @@ export const query = graphql`
             title
             tagline
           }
+        }
+      }
+    }
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            firstdraft
+          }
+          html
+        }
+      }
+    }
+    hobbies: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/hobbies/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            personalLink
+            personalLinkText
+          }
+          html
         }
       }
     }

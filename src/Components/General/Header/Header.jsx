@@ -9,7 +9,22 @@ const Header = () => {
       </div>
       <div className="navlinks">
         <div>
-          <Link to="/things/"> Things </Link>
+          <a
+            className="headerLlnk"
+            href="https://www.linkedin.com/in/graham-miller-68375b113/"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <div>
+          <a className="headerlink" href="https://github.com/millerthechiller">
+            GitHub
+          </a>
+        </div>
+        <div>
+          <a className="headerlink" href="mailto: graham.miller@queensu.ca">
+            Email
+          </a>
         </div>
       </div>
     </div>
