@@ -69,7 +69,7 @@ module.exports = {
         name: "Graham's Website",
         short_name: "Graham's Website",
         start_url: "/",
-        icon: "src/images/graham_favicon.ico",
+        icon: "src/images/boring_normal_favicon.ico",
       },
     },
   ],
