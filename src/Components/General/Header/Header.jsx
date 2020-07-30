@@ -22,7 +22,7 @@ const Header = () => {
           </a>
         </div>
         <div>
-          <a className="headerlink" href="mailto: graham.miller@queensu.ca">
+          <a className="headerlink" href="mailto: grahamiller96@gmail.com">
             Email
           </a>
         </div>
