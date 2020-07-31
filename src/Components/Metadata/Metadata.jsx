@@ -14,10 +14,11 @@ const Metadata = () => {
         property="og:image"
         content={`https://grahamhenrymiller.com${shareableImage}`}
       />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="583" />
+      <meta property="og:image:width" content="1440" />
+      <meta property="og:image:height" content="700" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:url" content="https://www.grahamhenrymiller.com/" />
+      <meta property="og:url" content="https://www.grahamhenrymiller.com" />
+
       <meta name="description" content={metadata.description} />
       <meta name="keywords" content={metadata.keywords} />
       <meta name="name" content={metadata.name} />
