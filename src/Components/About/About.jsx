@@ -7,7 +7,6 @@ const About = ({ aboutData }) => {
   return (
     <div className={styles.detailsContainer}>
       <h1>{title}</h1>
-      <p className={styles.firstTake}>{firstdraft}</p>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
